@@ -5,7 +5,7 @@ metadata:
   labels:
     app: {{ include "cidrapp.name" . }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.replicaCount | default 1 }}
   selector:
     matchLabels:
       app: {{ include "cidrapp.name" . }}

@@ -4,8 +4,9 @@ kind: Ingress
 metadata:
   name: {{ include "cidrapp.fullname" . }}
   annotations:
-{{ toYaml .Values.ingress.annotations | indent 4 }}
+    {{- toYaml .Values.ingress.annotations | nindent 4 }}
 spec:
+  ingressClassName: {{ .Values.ingress.className | default "nginx" }}
   rules:
     {{- range .Values.ingress.hosts }}
     - host: {{ .host }}
@@ -16,7 +17,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ include "cidrapp.fullname" $. }}
+                name: {{ include "cidrapp.fullname" $ }}
                 port:
                   number: {{ $.Values.service.port }}
           {{- end }}

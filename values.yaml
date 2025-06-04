@@ -11,8 +11,8 @@ service:
 
 ingress:
   enabled: true
+  className: nginx
   annotations:
-    kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /
   hosts:
     - host: snevs.github.io
@@ -23,5 +23,17 @@ resources: {}
 
 nodeSelector: {}
 tolerations: []
-affinity: []
+affinity: {}
+serviceAccount:
+  create: true
+  annotations: {}
+  automountServiceAccountToken: true
+  automount: true
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 80
 
