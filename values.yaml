@@ -1,0 +1,27 @@
+replicaCount: 1
+
+image:
+  repository: svcosti/cidrapp
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  hosts:
+    - host: snevs.github.io
+      paths:
+        - /
+        
+resources: {}
+
+nodeSelector: {}
+tolerations: []
+affinity: []
+
