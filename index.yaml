@@ -10,9 +10,9 @@ entries:
       artifacthub.io/license: Apache-2.0
     apiVersion: v2
     appVersion: "1.0"
-    created: "2025-06-04T12:25:55.328391+03:00"
+    created: "2025-06-04T12:27:59.532856+03:00"
     description: A Helm chart for the CIDR app
-    digest: 9cbf25932ba7d6b3dd3aa1b6ebe471341b1dd7010b5bdd8ffc0b9996e902a45e
+    digest: 57a061abbc4c3124812043e7a46d51695059c147321938b4e82f4bff09a12dc9
     home: https://github.com/SunO5/cidrapp
     icon: https://raw.githubusercontent.com/snevs/snevs.github.io/refs/heads/master/favicon.ico
     keywords:
@@ -31,4 +31,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/SunO5/cidrapp/main/cidrapp-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-04T12:25:55.326544+03:00"
+generated: "2025-06-04T12:27:59.531077+03:00"
