@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  cidrapp:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-06-04T04:07:36.514303+03:00"
+    description: A Helm chart for the CIDR app
+    digest: 7aa6723d86ed3bfe09d065408b60766c368654c25b6c70343f20c41fb8c5809f
+    name: cidrapp
+    type: application
+    urls:
+    - https://snevs.github.io/cidrapp/cidrapp-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-06-04T04:07:36.513371+03:00"
